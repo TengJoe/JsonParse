@@ -329,11 +329,10 @@ JsonObj Parse(vector<pair<int, string> > &tokenVec){
 
 JsonObj JSONParse(string data, int n){
     //词法分析过程
-    vector<pair<int,string> > tokenVec = GetToken(std::move(data));
+    vector<pair<int,string> > tokenVec = GetToken(std::msove(data));
 
     //语法分析过程
     JsonObj JSON = Parse(tokenVec);
-    JSON.type = 5;
     return JSON;
 }
 
